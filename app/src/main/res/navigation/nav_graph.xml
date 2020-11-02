@@ -4,18 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashFragment">
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.example.montersdata.splash.SplashFragment"
-        android:label="splash_fragment"
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_nav_main"
-            app:destination="@id/mainFragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.montersdata.main.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        android:name="com.example.androiddata.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_nav_detail"
+            app:destination="@id/detailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.montersdata.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail"/>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.montersdata.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_nav_main"
+            app:destination="@id/mainFragment"/>
+    </fragment>
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.example.montersdata.SettingsActivity"
+        android:label="SettingsActivity"/>
 </navigation>

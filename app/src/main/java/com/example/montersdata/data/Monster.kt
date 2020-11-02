@@ -1,10 +1,12 @@
-package com.example.montersdata.data
+package com.example.androiddata.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.montersdata.IMAGE_BASE_URL
 
-//@Entity(tableName = "monsters")
-data class Monster(
-//    @PrimaryKey(autoGenerate = true)
+@Entity(tableName = "monsters")
+data class Monster (
+    @PrimaryKey(autoGenerate = true)
     val monsterId: Int,
     val monsterName: String,
     val imageFile: String,
